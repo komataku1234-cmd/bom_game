@@ -1,0 +1,141 @@
+body{
+    user-select: none;
+
+    background:black;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+#game{
+    width:600px;
+    height:600px;
+
+    background:white;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.bom{
+    position:absolute;
+
+    font-size:50px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.count{
+    font-size:25px;
+    font-weight:bold;
+
+    color:red;
+}
+
+.danger{
+    animation: warning 0.2s infinite alternate;
+}
+
+@keyframes warning{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.3);
+    }
+}
+/* 共通 */
+.wall{
+    position:absolute;
+
+    width:130px;
+    height:120px;
+
+
+    top:50%;
+
+    transform:translateY(-50%);
+}
+
+/* 左 */
+.left{
+    left:0;
+    background:red;
+}
+
+/* 右 */
+.right{
+    right:0;
+    background:blue;
+}
+
+.redBomb{
+    filter:
+        drop-shadow(0 0 10px red)
+        /* hue-rotate(0deg); */
+}
+
+.blueBomb{
+    filter:
+        drop-shadow(0 0 10px blue)
+        /* hue-rotate(180deg); */
+}
+
+#score{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    font-size:40px;
+    font-weight:bold;
+
+    color:white;
+}
+span{
+    font-size:50px;
+    color:white;
+}
+#gameover{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    text-align:center;
+
+    color:red;
+
+    display:none;
+
+    z-index:100;
+}
+
+#gameover p{
+
+    font-size:80px;
+    font-weight:bold;
+}
+
+#resultBtn{
+
+    font-size:30px;
+
+    padding:10px 20px;
+
+    cursor:pointer;
+}

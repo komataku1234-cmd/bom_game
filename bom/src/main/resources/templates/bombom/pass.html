@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet"
+      href="../../static/passstyle.css"
+      th:href="@{/passstyle.css}">
+
+<title>PASSWORD</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title-box">
+        <div class="bomb">💣</div>
+
+        <h1>PASSWORD</h1>
+
+        <div class="bomb">💣</div>
+    </div>
+
+    <form method="get"
+          th:action="@{/edit/{id}(id=${id})}"
+          th:object="${pass}">
+
+        <input type="password"
+               th:field="*{pass}"
+               placeholder="パスワード入力">
+
+        <br>
+
+        <button type="submit">送信</button>
+
+        <div class="error"
+             th:if="${#fields.hasErrors('pass')}"
+             th:errors="*{pass}">
+            エラー
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

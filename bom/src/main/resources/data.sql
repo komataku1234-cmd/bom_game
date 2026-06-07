@@ -1,0 +1,1 @@
+INSERT INTO result (name,score) VALUES ('taro',1000);

@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #111, #222);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.title-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.bomb{
+    font-size: 60px;
+    animation: shake 1s infinite;
+}
+
+h1{
+    font-size: 60px;
+    letter-spacing: 6px;
+    color: white;
+    text-shadow:
+        0 0 10px red,
+        0 0 20px orange,
+        0 0 40px yellow;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th{
+    background-color: #ff4444;
+    padding: 15px;
+    font-size: 20px;
+}
+
+td{
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+tr:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+input[type="submit"]{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4444;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover{
+    background-color: orange;
+    transform: scale(1.05);
+}
+
+.back-btn{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #ff4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-btn:hover{
+    background-color: orange;
+    transform: scale(1.05);
+}
+
+@keyframes shake{
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-10deg); }
+    50%  { transform: rotate(10deg); }
+    75%  { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
