@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span id="playerName" th:text="${input.name} + 'の挑戦'"></span>
+    <div id="score">Score : 0</div>
+    <div id="game">
+        <div class="wall left"></div>
+        <div class="wall right"></div>
+    </div>
+    <div id="gameover">
+        
+        <p>GAME OVER</p>
+
+        <button id="resultBtn">
+            result
+        </button>
+    </div>
+</body>
+<!-- JS を外部ファイルに分けた場合 -->
+<script src="script.js"></script>
+</html>

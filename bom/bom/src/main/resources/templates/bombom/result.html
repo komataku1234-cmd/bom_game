@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet"
+      href="../../static/resultstyle.css"
+      th:href="@{/resultstyle.css}">
+
+<title>RESULT</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title-box">
+        <div class="bomb">💣</div>
+
+        <h1>RESULT</h1>
+
+        <div class="bomb">💣</div>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SCORE</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+
+        <tr th:each="res : ${dbList}">
+            <td th:text="${res.id}">1</td>
+            <td th:text="${res.name}">名前</td>
+            <td th:text="${res.score}">スコア</td>
+
+            <td>
+                <form th:action="@{/pass/{id}(id=${res.id})}">
+                    <input type="submit" value="編集">
+                </form>
+            </td>
+
+            <td>
+                <form th:action="@{/del/{id}(id=${res.id})}">
+                    <input type="submit" value="削除">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <a class="back-btn" th:href="@{/}">
+        タイトルへ戻る
+    </a>
+
+</div>
+
+</body>
+</html>
